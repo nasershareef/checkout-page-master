@@ -1,0 +1,139 @@
+html {box-sizing: border-box; font-family: 'Montserrat', sans-serif;}
+*,*::before,*::after {box-sizing: inherit;}
+*{margin: 0; padding: 0;}
+img{width: 100%; height: auto; border-radius: 1rem;}
+
+.display-flex {display: flex;}
+.margin-left{margin-left: auto;}
+.margin-top {margin-top: 1rem;}
+.inline-block {display: inline-block;}
+.margin-LR {margin: 0 1rem;}
+:root {
+    --orange:#F2994A;
+}
+
+body {
+    margin: 1rem;
+}
+
+button {
+    background-color: #F2F2F2;
+    border: 0;
+}
+
+#main{
+    max-width: 1000px;
+    margin: 5rem auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    'a a'
+    'c b'
+    'd d';
+}
+
+header {
+    padding: 2rem 0 1rem .5rem;
+    grid-area: a;
+}
+
+#shoping-card {
+    background-color: #F2F2F2;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-area: b;
+    max-height: 600px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 1rem;
+}
+
+.card-info {
+    margin-left: 1rem;
+}
+
+.rate {
+    color: var(--orange);
+    margin-top: 1rem;
+}
+.rate>span {
+    color: black;
+    margin-left: 1rem
+}
+
+.count-card {
+    margin-top: ;
+    border: solid 1px black;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+}
+
+.S-total {
+    margin: 1rem 0;
+}
+
+/* contact info */
+#contact-info {
+    grid-area: c;
+}
+
+.contact-p {
+    margin: 3rem 0 2rem;
+}
+
+option,
+select,
+input {
+    min-height: 56px;
+    max-width: 465px;
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #828282;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+p>input {
+    display: inline-block;
+    min-height: 20px;
+    max-width: 50px;
+}
+
+
+.display-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+}
+
+.btn {
+    height: 50px;
+    width: 100px;
+    background-color: var(--orange);
+    padding: 1rem 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 1rem 0 0 auto;
+}
+.btn>a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    #main {
+        grid-template-areas: 
+        'a'
+        'b'
+        'c'
+        'd';
+    }
+}
